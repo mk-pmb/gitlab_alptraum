@@ -1,0 +1,27 @@
+{ "name": "gitlab_alptraum",
+  "version": "0.1.0",
+  "description": "Install bash and git into alpine, then maybe clone a repo and run a command.",
+  "keywords": [
+    "alpine",
+    "docker",
+    "gitlab"
+  ],
+
+  "author": "Instaffo GmbH",
+  "homepage": "https://github.com/mk-pmb/gitlab_alptraum/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/gitlab_alptraum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/gitlab_alptraum/issues"
+  },
+  "contributors": [
+    "M.K. (https://github.com/mk-pmb)"
+  ],
+
+  "private": false, "license": "MIT",
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}

@@ -1,0 +1,52 @@
+cache:
+  paths:
+    - /usr/share/instaffo-util
+
+stages:
+  - test
+
+variables:
+  ALPTRAUM_URL: "https://gitlab.com/InstaffoOpenSource/shell/gitlab_alptraum/raw/experimental/sprout.sh"
+
+job_test_alpine:
+  stage: test
+  except:
+    - experimental
+  image: "alpine:latest"
+  script:
+    - sh sprout.sh
+
+job_test_dind:
+  stage: test
+  except:
+    - experimental
+  image: docker:git
+  services:
+    - docker:dind
+  script:
+    - sh sprout.sh
+
+job_test_nodejs_v10:
+  stage: test
+  except:
+    - experimental
+  image: node:10
+  script:
+    - sh sprout.sh
+
+job_test_nodejs_v12:
+  stage: test
+  except:
+    - experimental
+  image: node:12
+  script:
+    - sh sprout.sh
+
+job_test_nodejs_v12_alpine:
+  stage: test
+  except:
+    - experimental
+  image: node:12-alpine
+  script:
+    - sh sprout.sh
+    - nodejs -e 'console.log("+OK nodejs command works");'
