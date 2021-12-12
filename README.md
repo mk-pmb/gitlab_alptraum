@@ -12,11 +12,22 @@ Install bash and git into alpine, then maybe clone a repo and run a command.
   a reverse recruiting service for tech jobs (and others).
 
 
+
 Usage
 -----
 
 An example can be found in the CI scripts of
 [fail_retry_delay_loop](https://github.com/mk-pmb/fail_retry_delay_loop).
+
+
+
+When (not) to use
+-----------------
+
+see [`docs/update_strategies.md`](docs/update_strategies.md).
+
+
+
 
 
 
